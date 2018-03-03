@@ -7,14 +7,44 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBAction func onLogin(_ sender: Any) {
+        PFUser.logInWithUsername(inBackground: usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: Error?) in
+            
+            if user != nil {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                
+                print("You're logged in!")
+                
+            }
+        }
     }
     @IBAction func onSignUp(_ sender: Any) {
+        
+        let newuser = PFUser()
+        
+        newuser.username = usernameField.text
+        newuser.password = passwordField.text
+        
+        newuser.signUpInBackground { (success: Bool, error: Error?) in
+            
+            if success
+            {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                
+                print("yay, created a new user")
+            }
+            else
+            {
+                print(error?.localizedDescription ?? "Not a way")
+            }
+        }
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
