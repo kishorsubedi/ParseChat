@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02A8B971204B0B8B00686F82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A8B970204B0B8B00686F82 /* LoginViewController.swift */; };
 		02A8B977204B128500686F82 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A8B976204B128500686F82 /* ChatViewController.swift */; };
+		02A8B979204B198600686F82 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A8B978204B198600686F82 /* ChatCell.swift */; };
 		02D19F86204B0A7800468784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D19F85204B0A7800468784 /* AppDelegate.swift */; };
 		02D19F8B204B0A7800468784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D19F89204B0A7800468784 /* Main.storyboard */; };
 		02D19F8D204B0A7800468784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D19F8C204B0A7800468784 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		02A8B970204B0B8B00686F82 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		02A8B976204B128500686F82 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		02A8B978204B198600686F82 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		02D19F82204B0A7800468784 /* ParseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D19F85204B0A7800468784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02D19F8A204B0A7800468784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		02D19F79204B0A7800468784 = {
 			isa = PBXGroup;
 			children = (
+				02A8B978204B198600686F82 /* ChatCell.swift */,
 				02A8B976204B128500686F82 /* ChatViewController.swift */,
 				02A8B970204B0B8B00686F82 /* LoginViewController.swift */,
 				02D19F84204B0A7800468784 /* ParseChat */,
@@ -464,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02A8B971204B0B8B00686F82 /* LoginViewController.swift in Sources */,
+				02A8B979204B198600686F82 /* ChatCell.swift in Sources */,
 				02A8B977204B128500686F82 /* ChatViewController.swift in Sources */,
 				02D19F86204B0A7800468784 /* AppDelegate.swift in Sources */,
 			);
