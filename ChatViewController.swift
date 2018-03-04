@@ -76,7 +76,18 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let post = posts[indexPath.row]
         
+        if post["text"] != nil{
         cell.historymessageLabel.text = post["text"] as! String?
+        }
+        if let user = post["author"] as? PFUser
+        {
+            cell.usernameField.text = user.username
+        }
+        else
+        {
+            cell.usernameField.text = "🤖"
+        }
+        
                 return cell
     }
     func onTimer() {
