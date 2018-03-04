@@ -10,6 +10,7 @@ import UIKit
 
 class ChatCell: UITableViewCell {
 
+    @IBOutlet weak var historymessageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
