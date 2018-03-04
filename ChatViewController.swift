@@ -34,6 +34,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        // Provide an estimated row height. Used for calculating scroll indicator
+        tableView.estimatedRowHeight = 50
                 // Do any additional setup after loading the view.
     }
 
@@ -45,14 +48,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func fetch()
     {
         let query = PFQuery(className: "Message")
-        query.addDescendingOrder("created_at")
         query.includeKey("author")
         query.includeKey("text")
+        query.addDescendingOrder("createdAt")
         
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) -> Void in
             
             if (error == nil) {
-                print(73434)
                 self.posts = posts!
                 self.tableView.reloadData()
             }
